@@ -1,0 +1,29 @@
+programa {
+  funcao inicio() {
+    real valor = 0
+    cadeia formadepagamento
+    cadeia confir
+    real avista = valor
+    escreva("Qual é o valor da venda? ")
+    leia(valor)
+
+    escreva("Qual a forma de pagamento? ")
+    leia (formadepagamento)
+
+    se (formadepagamento == "dinheiro"){
+      avista = valor - (+valor*5/100)
+    escreva("Seu valor é "+avista)}
+
+    senao se (formadepagamento == "cartao")
+    {escreva("Seu valor é "+valor)}
+
+    escreva("\nconfirmar compra? ")
+    leia(confir)
+
+    se (confir == "não"){
+      escreva("compra cancelada")
+    }
+    senao se (confir == "sim")
+    {escreva("obrigado por comprar")}
+  }
+}
